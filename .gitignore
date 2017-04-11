@@ -16,3 +16,10 @@ project/plugins/project/
 .cache
 .lib/
 
+.DS_Store
+.idea/
+project/
+spark-warehouse/
+src/.DS_Store
+src/main/.DS_Store
+src/main/resources/
