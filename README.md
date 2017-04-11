@@ -6,7 +6,7 @@ To start, first download the assignment: [timeusage.zip](http://alaska.epfl.ch/~
 
 and place it in the folder src/main/resources/timeusage/ in your project directory.
 
-The problem
+## The problem
 
 The dataset is provided by Kaggle and is documented here:
 
@@ -140,7 +140,7 @@ does the time spent on primary needs change when people get older?
 how much time do employed people spend on leisure compared to unemployed people?
 To achieve this, we will first read the dataset with Spark, transform it into an intermediate dataset which will be easier to work with for our use case, and finally compute information that will answer the above questions.
 
-Read-in Data
+## Read-in Data
 
 The simplest way to create a DataFrame consists in reading a file and letting Spark-sql infer the underlying schema. However this approach does not work well with CSV files, because the inferred column types are always String.
 
@@ -150,7 +150,7 @@ Our first task consists in turning this first line into a Spark-sql StructType. 
 
 The second step is to be able to effectively read the CSV file is to turn each line into a Spark-sql Row containing columns that matches the schema returned by dfSchema. That’s the job of the row method.
 
-Project
+## Project
 
 As you probably noticed, the initial dataset contains lots of information that we don’t need to answer our questions, and even the columns that contain useful information are too much detailed. For instance, we are not interested in the exact age of each respondent, but just whether she was “young”, “active” or “elder”.
 
@@ -177,7 +177,7 @@ Last, people that are not employable will be filtered out of the resulting datas
 
 The comment on top of the timeUsageSummary method will give you more specific information about what is expected in each column.
 
-Aggregate
+## Aggregate
 
 Finally, we want to compare the average time spent on each activity, for all the combinations of working status, sex and age.
 
@@ -185,7 +185,7 @@ We will implement the timeUsageGrouped method which computes the average number 
 
 Now you can run the project and see what the final DataFrame contains. What do you see when you compare elderly men versus elderly women's time usage? How much time elder people allocate to leisure compared to active people? How much time do active employed people spend to work?
 
-Alternative ways to manipulate data
+## Alternative ways to manipulate data
 
 We can also implement the timeUsageGrouped method by using a plain SQL query instead of the DataFrame API. Note that sometimes using the programmatic API to build queries is a lot easier than writing a plain SQL query. Can you think of a previous query that would have been a nightmare to write in plain SQL?
 
