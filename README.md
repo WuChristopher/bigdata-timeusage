@@ -2,7 +2,7 @@
 
 To start, first download the assignment: [timeusage.zip](http://alaska.epfl.ch/~dockermoocs/bigdata/timeusage.zip). For this assignment, you also need to download the data (164 MB):
 
-[http://alaska.epfl.ch/~dockermoocs/bigdata/atussum.csv](http://alaska.epfl.ch/~dockermoocs/bigdata/atussum.csv)
+http://alaska.epfl.ch/~dockermoocs/bigdata/atussum.csv
 
 and place it in the folder src/main/resources/timeusage/ in your project directory.
 
@@ -10,7 +10,7 @@ and place it in the folder src/main/resources/timeusage/ in your project directo
 
 The dataset is provided by Kaggle and is documented here:
 
-[https://www.kaggle.com/bls/american-time-use-survey](https://www.kaggle.com/bls/american-time-use-survey)
+https://www.kaggle.com/bls/american-time-use-survey
 
 It contains information about how do people spend their time (e.g., sleeping, eating, working, etc.).
 
